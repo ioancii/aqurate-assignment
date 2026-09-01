@@ -1,0 +1,14 @@
+What has to go from orders_raw when creating orders_clean:
+- duplicate orders
+- status test
+- customer id null
+- any quantity <1
+- unit price <1 (also added upper margin for error catching)
+
+exception for status refunded, as I consider that to be a clean and completed order even if it was refunded (who knows why)
+
+-------
+
+after creating orders_clean too many rows have been removed. This had me checking the data manually and finding that some order dupes are fully duped (like 2 identical orders for earbuds), while some others have the same order id, customer, time, but different products and quantities. I assume those are valid orders as well but without a possibility to store 2 products in the same column the order gets duped.
+
+triple checked from all directions just to find out it was a terminal problem.
