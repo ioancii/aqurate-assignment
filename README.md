@@ -5,9 +5,9 @@ End-to-end ETL pipeline: pulls order data from an API, cleans it, converts reven
 ## Setup
 
 1. Create a `.env` file with:
-DATABASE_URL=postgresql://postgres.oocbzevbxpzccnwrbgbe:InterzisMarlboro13!@aws-1-eu-west-1.pooler.supabase.com:6543/postgres
+DATABASE_URL=supabase_connection_string
 SOURCE_API_URL=https://jzozteoirwfczccltcdr.supabase.co/rest/v1/orders_raw
-SOURCE_API_KEY=sb_publishable_Xwjiw--qkKcbMuSbKd6I2w_wN9mpNTv
+SOURCE_API_KEY=source_api_key
 
 
 2. Install dependencies:
